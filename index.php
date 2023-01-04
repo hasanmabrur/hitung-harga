@@ -20,7 +20,7 @@
                 $result = mysqli_query($conn, $query);
 
                 // membuat form select
-                echo "<select class='form-control' name='produk' id='produk'>";
+                echo "<select class='form-control' name='produk' id='produk'><option disabled selected value>--</option>";
                 while($row = mysqli_fetch_array($result)) {
                     echo "<option value='" . $row['id_produk'] . "'>" . $row['nama_produk'] . "</option>";
                 }
